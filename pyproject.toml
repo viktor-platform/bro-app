@@ -1,0 +1,16 @@
+[tool.isort]
+profile="black"
+line_length = 120
+multi_line_output=3
+include_trailing_comma= true
+force_grid_wrap=0
+use_parentheses= false
+known_first_party="viktor"
+
+[tool.pylint]
+max-line-length = 120
+disable= ["C0111", "E0611", "R0801", "C0301", "C0103", "R0903", "R1705", "E0401", "R0914", "W0511", "R0913", "R0912", "W0613", "R0401"]
+max-attributes = 10
+
+[tool.black]
+line_length = 120
