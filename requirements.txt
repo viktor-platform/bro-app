@@ -7,4 +7,3 @@ shapely==2.0.1
 xmltodict==0.13.0
 geopandas==0.12.2
 bro==0.2.4
-d
