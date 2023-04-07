@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## v0.0.3-beta [07/04/2023]
+### Added
+- Added some error handling on cpt characteristic retrieval
+- Added pictures to README.md
+
+### Changed
+- Updated bro version to 0.2.3
+
+
 ## v0.0.2-beta [31/03/2023]
 ### Added
 - (#7) Added outline of NL to MapView
