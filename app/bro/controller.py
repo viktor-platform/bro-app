@@ -229,7 +229,7 @@ class Controller(ViktorController):
             cpt_characteristics = get_cpt_characteristics(begin_date, end_date, envelope)
         except ValueError as e:
             raise UserError(
-                f"The requested area is too large, try to retrieve less objects by providing a smaller area. BRO REST API response: {e}"
+                f"BRO REST API response: {e}"
             )
         except ReadTimeout as e:
             raise UserError(f"{e}")
