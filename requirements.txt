@@ -6,4 +6,5 @@ aiohttp==3.8.4
 shapely==2.0.1
 xmltodict==0.13.0
 geopandas==0.12.2
-bro==0.2.3
+bro==0.2.4
+d
