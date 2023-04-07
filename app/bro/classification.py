@@ -17,15 +17,22 @@ SOFTWARE.
 from copy import deepcopy
 from math import ceil
 from pathlib import Path
-from typing import Dict, List, Union
+from typing import Dict
+from typing import List
+from typing import Union
 
 from lxml import etree
-from munch import munchify, unmunchify
+from munch import munchify
+from munch import unmunchify
 
-from viktor import Color, UserError
+from viktor import Color
+from viktor import UserError
 from viktor.errors import GEFClassificationError
 from viktor.geo import GEFData as SDKGEFData
-from viktor.geo import GEFParsingException, RobertsonMethod, Soil, SoilLayout
+from viktor.geo import GEFParsingException
+from viktor.geo import RobertsonMethod
+from viktor.geo import Soil
+from viktor.geo import SoilLayout
 
 DEFAULT_MIN_LAYER_THICKNESS = 200
 GEF_XML_MAPPING = {
