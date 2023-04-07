@@ -25,12 +25,17 @@ A published version of this app is available on [demo.viktor.ai](https://demo.vi
 
 After pressing the 'Next step' button, a simple check is performed to see whether the retrieved data is up-to-date with the parameters.
 
+![](resources/step_1.png)
+
 ### Step 2: Downloads + Visualisation
 
 1. Select up to 10 CPTs in the map to be classified with the Robertson method. The classification can be seen in the CPT comparison view.
 
+![](resources/step_2_map.png)
+
 2. After selecting CPTs on the map, the options in this part are set with these CPTs. You can choose to download these CPTs as XML file, or you can choose to download all available CPTs within your region of interest.
 
+![](resources/step_2_comparison.png)
 
 ## App structure 
 This is an editor-only app type.
