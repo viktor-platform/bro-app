@@ -20,35 +20,46 @@ from datetime import datetime
 # pylint: disable=line-too-long, c-extension-no-member
 from math import floor
 from pathlib import Path
-from typing import List, Optional
+from typing import List
+from typing import Optional
 
 import geopandas as gpd
-from bro import Envelope, Point, get_cpt_characteristics, get_cpt_object
+from bro import Envelope
+from bro import Point
+from bro import get_cpt_characteristics
+from bro import get_cpt_object
 from plotly import graph_objects as go
 from plotly.subplots import make_subplots
+from requests import ReadTimeout
 
-from viktor import Color, File, UserError, ViktorController
+from viktor import Color
+from viktor import File
+from viktor import UserError
+from viktor import ViktorController
 from viktor.core import progress_message
 from viktor.geometry import GeoPolygon
-from viktor.result import DownloadResult, SetParamsResult
-from viktor.views import (
-    InteractionEvent,
-    MapLabel,
-    MapLegend,
-    MapPoint,
-    MapPolygon,
-    MapPolyline,
-    MapResult,
-    MapView,
-    PlotlyResult,
-    PlotlyView,
-    WebResult,
-    WebView,
-)
+from viktor.result import DownloadResult
+from viktor.result import SetParamsResult
+from viktor.views import InteractionEvent
+from viktor.views import MapLabel
+from viktor.views import MapLegend
+from viktor.views import MapPoint
+from viktor.views import MapPolygon
+from viktor.views import MapPolyline
+from viktor.views import MapResult
+from viktor.views import MapView
+from viktor.views import PlotlyResult
+from viktor.views import PlotlyView
+from viktor.views import WebResult
+from viktor.views import WebView
 
-from .bro_api import filter_available_cpts, get_cpt_object_xml_async
-from .classification import CPT, Classification, IMBROFile
-from .parametrization import DEFAULT_ROBERTSON_TABLE, Parametrization
+from .bro_api import filter_available_cpts
+from .bro_api import get_cpt_object_xml_async
+from .classification import CPT
+from .classification import Classification
+from .classification import IMBROFile
+from .parametrization import DEFAULT_ROBERTSON_TABLE
+from .parametrization import Parametrization
 
 MAX_AMOUNT_OF_CPTS = 15
 
@@ -140,7 +151,6 @@ class Controller(ViktorController):
         cpt_dicts = [IMBROFile(xml_file_content) for xml_file_content in xml_files]
         # Classify
         classified_cpts = [Classification(DEFAULT_ROBERTSON_TABLE).classify_cpt_file(cpt) for cpt in cpt_dicts]
-
         cpts = [CPT(cpt_params=classified_cpt, soil_mapping=soil_mapping) for classified_cpt in classified_cpts]
 
         figure = visualize_cpts_with_classifications(cpts)
@@ -215,7 +225,15 @@ class Controller(ViktorController):
         end_date = datetime.today().strftime("%Y-%m-%d")
 
         # TODO: Add logging for get_cpt_characteristics in V14
-        cpt_characteristics = get_cpt_characteristics(begin_date, end_date, envelope)
+        try:
+            cpt_characteristics = get_cpt_characteristics(begin_date, end_date, envelope)
+        except ValueError as e:
+            raise UserError(
+                f"The requested area is too large, try to retrieve less objects by providing a smaller area. BRO REST API response: {e}"
+            )
+        except ReadTimeout as e:
+            raise UserError(f"{e}")
+
         filtered_cpt_data = filter_available_cpts(params, cpt_characteristics)
 
         filtered_cpts = {

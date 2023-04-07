@@ -16,7 +16,8 @@ SOFTWARE.
 """
 import asyncio
 import warnings
-from typing import Dict, List
+from typing import Dict
+from typing import List
 
 import aiohttp
 from bro import CPTCharacteristics

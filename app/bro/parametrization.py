@@ -18,21 +18,19 @@ import json
 
 from viktor import UserError
 from viktor.errors import InputViolation
-from viktor.parametrization import (
-    DownloadButton,
-    GeoPolygonField,
-    HiddenField,
-    LineBreak,
-    MapSelectInteraction,
-    MultiSelectField,
-    NumberField,
-    OptionListElement,
-    SetParamsButton,
-    Step,
-    Text,
-    ToggleButton,
-    ViktorParametrization,
-)
+from viktor.parametrization import DownloadButton
+from viktor.parametrization import GeoPolygonField
+from viktor.parametrization import HiddenField
+from viktor.parametrization import LineBreak
+from viktor.parametrization import MapSelectInteraction
+from viktor.parametrization import MultiSelectField
+from viktor.parametrization import NumberField
+from viktor.parametrization import OptionListElement
+from viktor.parametrization import SetParamsButton
+from viktor.parametrization import Step
+from viktor.parametrization import Text
+from viktor.parametrization import ToggleButton
+from viktor.parametrization import ViktorParametrization
 
 ADDITIONAL_COLUMNS = [
     "corrected_depth",
