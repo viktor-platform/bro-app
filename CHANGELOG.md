@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## v0.0.5-beta [15/04/2023]
+### Fixed
+- Fixed breaking CPT plot on missing "date" key in researchReportDate
+
 ## v0.0.3-beta [07/04/2023]
 ### Added
 - Added some error handling on cpt characteristic retrieval
