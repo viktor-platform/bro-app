@@ -1,4 +1,4 @@
-viktor==13.8.0
+viktor==14.0.0
 requests==2.28.2
 lxml==4.9.2
 plotly==5.13.0

@@ -147,7 +147,7 @@ def convert_xml_dict_to_cpt_dict(xml_dict) -> dict:
     return {
         "headers": {
             "name": xml_data.broId,
-            "gef_file_date": xml_data.researchReportDate.date,
+            "gef_file_date": xml_data.researchReportDate.get("date"),
             "height_system": xml_data.deliveredVerticalPosition.verticalDatum,
             "fixed_horizontal_level": xml_data.deliveredVerticalPosition.localVerticalReferencePoint,
             "cone_type": xml_data.conePenetrometerSurvey.conePenetrometer.conePenetrometerType,
