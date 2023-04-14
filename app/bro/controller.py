@@ -65,7 +65,6 @@ MAX_AMOUNT_OF_CPTS = 15
 
 
 class Controller(ViktorController):
-    viktor_enforce_field_constraints = True  # Resolves upgrade instruction https://docs.viktor.ai/sdk/upgrades#U83
     label = "BRO CPT retriever"
     parametrization = Parametrization(width=30)
 
