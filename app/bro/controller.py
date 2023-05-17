@@ -98,6 +98,7 @@ class Controller(ViktorController):
                     float(cpt["lat"]),
                     float(cpt["lon"]),
                     title=cpt["bro_id"],
+                    description=f"CPT performed at: {cpt['date']}  \n",
                     color=color,
                     identifier=cpt["bro_id"],
                     icon="triangle-down-filled",

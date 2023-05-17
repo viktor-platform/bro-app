@@ -45,6 +45,7 @@ def filter_available_cpts(params, cpts: List[CPTCharacteristics]) -> List[Dict]:
                     "bro_id": cpt.bro_id,
                     "lat": cpt.wgs84_coordinate.lat,
                     "lon": cpt.wgs84_coordinate.lon,
+                    "date": cpt.start_time,
                 }
             )
     return filtered_cpts
