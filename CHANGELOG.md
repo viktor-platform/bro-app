@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## v0.0.6-beta [17/05/2023]
+### Added
+- Added date of which CPT was performed to MapLabel of CPT
+- updated bro version to 0.2.6
+
 ## v0.0.5-beta [15/04/2023]
 ### Fixed
 - Fixed breaking CPT plot on missing "date" key in researchReportDate
