@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## v0.1.0 [04/10/2023]
+### Changed
+- updated bro version to 0.2.7 to fix returned XMLS from BRO REST API
+
 ## v0.0.6-beta [17/05/2023]
 ### Added
 - Added date of which CPT was performed to MapLabel of CPT
