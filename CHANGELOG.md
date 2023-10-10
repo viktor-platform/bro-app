@@ -1,6 +1,30 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## v[major.minor.patch] [dd/mm/yyyy]
+### Added
+None.
+
+### Changed
+None.
+
+### Deprecated
+None.
+
+### Removed
+None.
+
+### Security
+None.
+
+### Fixed
+None.
+
+## v0.1.1 [10/10/2023]
+### Changed
+- updated bro version to 0.2.8 to fix other retrieved params from BRO REST API
+- updated VIKTOR SDK version to v14.6.0
+
 ## v0.1.0 [04/10/2023]
 ### Changed
 - updated bro version to 0.2.7 to fix returned XMLS from BRO REST API
