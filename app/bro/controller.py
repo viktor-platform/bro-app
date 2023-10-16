@@ -228,9 +228,7 @@ class Controller(ViktorController):
         try:
             cpt_characteristics = get_cpt_characteristics(begin_date, end_date, envelope)
         except ValueError as e:
-            raise UserError(
-                f"BRO REST API response: {e}"
-            )
+            raise UserError(f"BRO REST API response: {e}")
         except ReadTimeout as e:
             raise UserError(f"{e}")
 

@@ -1,12 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## v[major.minor.patch] [dd/mm/yyyy]
+## v0.1.2 [16/10/2023]
 ### Added
 None.
 
 ### Changed
-None.
+- updated bro version to 0.2.9 to fix breaking changes from REST API.
 
 ### Deprecated
 None.
