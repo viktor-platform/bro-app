@@ -22,7 +22,7 @@ None.
 
 ## v0.1.3 [10/11/2023]
 ### Fixed
-- Fixed calculation of "Rf" to evaluate happen when qc and fs not equal to 0 or None if Rf is missing in CPT.
+- Fixed calculation of "Rf" to evaluate happen when qc not equal to 0 or None and fs not equal to None if Rf is missing in CPT.
 
 ## v0.1.2 [16/10/2023]
 ### Added

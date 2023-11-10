@@ -111,7 +111,7 @@ def convert_xml_dict_to_cpt_dict(xml_dict) -> dict:
 
     if not measurement_data["Rf"]:  # If Rf is not provided in xml file, then calculate it
         measurement_data["Rf"] = [
-            fs / qc if (qc is not None and fs is not None and qc != 0 and fs != 0) else None
+            fs / qc if (qc is not None and fs is not None and qc != 0) else None
             for qc, fs in zip(measurement_data["qc"], measurement_data["fs"])
         ]
 
