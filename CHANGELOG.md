@@ -1,6 +1,29 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## v[major.minor.patch] [dd/mm/yyyy]
+### Added
+None.
+
+### Changed
+None.
+
+### Deprecated
+None.
+
+### Removed
+None.
+
+### Security
+None.
+
+### Fixed
+None.
+
+## v0.1.3 [10/11/2023]
+### Fixed
+- Fixed calculation of "Rf" to evaluate happen when qc and fs not equal to 0 or None if Rf is missing in CPT.
+
 ## v0.1.2 [16/10/2023]
 ### Added
 None.
